@@ -10,24 +10,26 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.css"  rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <style>
-
+        body{
+            font-family: 'Slabo 27px', serif;
+            font-weight: bold;
+         }
         .navbar-brand img {
-            width:200px;
-            height:50px;
-            padding-bottom: 10px;
-
-
-
-
+            width:280px;
+            height:70px;
+            padding-bottom:15px;
+            padding-top:0;
+            margin:0;
+            float:left;
         }
+         #about{
+             background-size: cover;
+         }
             .navbar{
                 padding-top:3px;
                 background-color: white;
-
-
-
-
             }
 
             .list-group-item{
@@ -36,43 +38,204 @@
                 color:red;
                 font-size:1.2em;
                 font-weight: bold;
+            }
 
-
+            .article{
+                font-family: 'Pacifico', cursive;
+                font-size: 1.8em;
             }
 
         .list-group-item:hover{
             text-emphasis-color: blue;
         }
         .navbar-toggle {
-            margin: 18px 0;
+            margin: 25px 0;
+        }
+
+        .form-group{
+              margin-top:10px;
+
+
+       }
+        #menu_image{
+            background-image: url(images/menu.jpg);
+            height:800px;
+            width:80%;
+            align-self: center;
+            /*background-size:cover;*/
+        }
+        #loginText{
+            padding-top:2px;
+        }
+        .btn-success{
+            margin-top:10px;
+        }
+
+        #loginForm{
+            margin-right:40px;
+        }
+
+        div.c-wrapper{
+            width: 100%; /* for example */
+            margin: auto;
+        }
+
+
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img{
+            width: 100%;
+            margin: auto;
+        }
+
+        .active{
+            background-color: darkgray;
+            color: #080808;
         }
 
     </style>
 </head>
 <body>
-<nav class="navbar navbar-default">
-    <div class="navbar-inner">
-    <div class="container">
+<nav class="navbar navbar-default navbar-fixed-top">
+
+
         <div class="navbar-header">
-            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="myScrollspy">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand"><img src="images/logo.jpg" alt=""></a>
     </div>
+
         <div class = "collapse navbar-collapse">
             <ul class = "nav navbar-nav">
-                <li class="list-group-item"><a href="#home">Home</a></a></li>
-                <li class="list-group-item"><a href="#about">Menu</a></li>
+                <li class="list-group-item"><a href="#">Home</a></a></li>
+                <li class="list-group-item"><a href="#menu">Menu</a></li>
                 <li class="list-group-item"><a href="#download">Download Our App</a></li>
                 <li class="list-group-item"><a href="#location">Locations</a></li>
                 <li class="list-group-item"><a href="#blog">Blog</a></li>
                 </ul>
+
+                <form class="nav navbar-form navbar-collapse collapse navbar-right" id="loginForm">
+                <div class="form-group">
+                    <input type="email" placeholder="Customer email" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="password" class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-success">Log In</button>
+            </form>
         </div>
     </div>
 </div>
 </nav>
+<br>
+<div class="c-wrapper">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="images/res.jpg" alt="dummy">
+            <div class="carousel-caption">
+                <h3>The Ambience</h3>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="images/cherries.jpg" alt="...">
+            <div class="carousel-caption">
+                <h3>Exotic Recipes</h3>
+            </div>
+            </div>
+
+        <div class="item">
+            <img src="images/fried.jpg" alt="...">
+            <div class="carousel-caption">
+                <h3>Best Ingredients</h3>
+            </div>
+            </div>
+
+        <div class="item">
+            <img src="images/burger.jpg" alt="...">
+            <div class="carousel-caption">
+                <h3>Amazing Flavor</h3>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="images/unique.jpg" alt="...">
+            <div class="carousel-caption">
+                <h3>It does not get better than this!</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div> <!-- Carousel -->
+
+</div>
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="text-center text-success article">About Us</div>
+        <div class="col-lg-12" id="about">
+
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+        </div>
+
+    </div>
+
+
+</div>
+<br><br>
+
+<div class="container" id="menu">
+        <div class="text-center text-info article">Menu</div>
+        <br><br>
+        <div class="center-block" id="menu_image">
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="text-center article">Download the App</div>
+        <div class="col-lg-12" id="download">
+
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+        </div>
+
+    </div>
+
+
+</div>
 
 <!--jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
@@ -80,3 +243,5 @@
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
